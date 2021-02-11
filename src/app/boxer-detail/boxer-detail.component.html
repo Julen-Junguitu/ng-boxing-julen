@@ -1,0 +1,29 @@
+<div class="card" >
+  <div class="card-body">
+<figure class="figure">
+
+  <figcaption class="figure-caption">
+    <h4>Nombre: {{boxer.name}}</h4>
+    <h5>País: {{boxer.country}}</h5>
+    <h5>Edad: {{boxer.age}}</h5>
+    <h5>Record: {{boxer.record}}</h5>
+    
+  </figcaption>
+</figure>
+</div>
+</div>
+<div class="row mt-4">
+  <div class="col-md-4">
+    <button class="btn btn-outline-secondary mr-3"
+            style="width:80px"
+            (click)="onBack()">
+      <i class="fa fa-chevron-left"></i> Back
+    </button>
+    <button class="btn btn-outline-primary"
+            style="width:80px"
+            (click)="goEdit()">
+      Edit
+    </button>
+  </div>
+</div>
+

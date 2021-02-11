@@ -1,0 +1,120 @@
+<div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+  
+    <div class="card-body">
+      <form novalidate
+            (ngSubmit)="saveBoxer()"
+            [formGroup]="boxerForm">
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="boxerNameId">Nombre</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="boxerNameId"
+                   type="text"
+                   placeholder="Name (required)"
+                   formControlName="name"
+                   name="name" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="countryId">País</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="countryId"
+                   type="text"
+                   placeholder="Country (required)"
+                   formControlName="country"
+                   name="country" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="ageId">Edad</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="ageId"
+                      type="text"
+                      placeholder="Introduce age"   
+                      formControlName="age"
+                      name="age" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="recordId">Record</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="recordId"
+                      type="text"
+                      placeholder="Introduce record"
+                      formControlName="record"
+                      name="record" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="lastOponentsId">Ultimos adversarios</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="lastOponentsId"
+                      placeholder="Introduce the oponents:"
+                      formControlName="lastOponents"
+                      name="lastOponents" />
+          </div>
+        </div>
+        
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="imageId">Image</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="imageID"
+                      type="text"
+                      placeholder="Introduce image URL"
+                      formControlName="image"
+                      name="image" />
+          </div>
+        </div>
+
+  
+        <div class="form-group row mb-2">
+          <div class="offset-md-2 col-md-4">
+            <button class="btn btn-primary mr-3"                    
+                    type="submit">
+              Save
+            </button>
+            <button class="btn btn-outline-secondary mr-3"                    
+                    type="button"
+                    title="Cancel your edits"
+                    [routerLink]="['']">
+              Cancel
+            </button>
+            <button class="btn btn-outline-warning"                  
+                    type="button"
+                    title="Delete this boxer"
+                    (click)="deleteBoxer()">
+              Delete
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+    <div class="alert alert-danger"
+         *ngIf="errorMessage">{{errorMessage}}
+    </div>
+  </div>

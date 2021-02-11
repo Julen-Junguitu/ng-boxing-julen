@@ -1,0 +1,26 @@
+<div class="card" style="width: 18rem;">
+<figure class="figure">
+  <img class="card-img-top" src= {{boxer.image}} alt="Card image cap" width=200 height=250>
+  
+  
+  
+  <figcaption class="figure-caption">
+    
+    <div class="card-header">
+    <h5><a [routerLink]="['/boxers', boxer.id]">{{boxer.name}}</a>
+      
+    </h5>
+    <p>Record: {{boxer.record}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <p>Last oponents:</p>
+      </li>
+      <li class="list-group-item">
+    <p> {{boxer.lastOponents}}</p>
+      </li>
+    </ul>
+  </figcaption>
+
+</figure>
+</div>
