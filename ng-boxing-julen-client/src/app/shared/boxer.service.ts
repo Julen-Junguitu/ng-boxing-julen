@@ -10,7 +10,7 @@ import { Boxer } from './boxer';
   providedIn: 'root'
 })
 export class BoxerService {
-  private boxersUrl = 'api/boxers';
+  private boxersUrl = 'localhost:8000/boxers';
 
   constructor(private http: HttpClient) { }
 
